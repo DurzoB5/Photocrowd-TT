@@ -1,0 +1,39 @@
+{% extends 'abstracts/card.html' %}
+
+{% block card_title %}About{% endblock %}
+
+{% block card_body %}
+    <p><strong>This PhotoCrowd Tech Test was created by Tom Morledge</strong></p>
+    <p>Select the leaderboard section from the navbar to see the Leaderboard in action</p><br/>
+
+    <p>The database contains three tables which consist of:</p>
+    <ul>
+        <li>User</li>
+        <li>Competition</li>
+        <li>Submission</li>
+    </ul>
+
+    <h5>User</h5>
+    <p>
+        The User table holds data relating to a registered user of the system who may or may not of
+        of submitted submissions to competitions.
+    </p>
+    <h5>Competition</h5>
+    <p>
+        The Competition table holds data about ongoing/previous competitions. As there were no readily available
+        competition data in the JSON provided I used the second section of the submission name (after the `in`) to
+        generate this data.
+    </p>
+    <h5>Submission</h5>
+    <p>
+        The Submission table is a through table which links a user to a competition with each submission being
+        able to be given a name and a score.
+    </p>
+
+    <div class="alert-warning">
+        <p>
+            Currently there is a restriction that a Submission name must be unique to the competition it is being
+            submitted to.
+        </p>
+    </div>
+{% endblock %}

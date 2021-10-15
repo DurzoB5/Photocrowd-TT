@@ -1,0 +1,15 @@
+<div class="card {% if use_alt %}card-alt{% endif %}" id="{% block card_id %}{% endblock %}">
+    {% block card_modal %}
+    {% endblock %}
+    <div class="card-header text-uppercase font-weight-bold d-sm-flex justify-content-between align-items-center">
+      {% block card_title_prefix %}{% endblock %}
+      <h4>{% block card_title %}Card Title{% endblock %}</h4>
+      {% block card_title_additional %}{% endblock %}
+    </div>
+    <div class="card-body">
+      {% block card_body %}
+      {% endblock %}
+    </div>
+    {% block card_javascript %}
+    {% endblock %}
+  </div>

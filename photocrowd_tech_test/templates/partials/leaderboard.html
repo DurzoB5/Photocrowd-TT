@@ -1,0 +1,31 @@
+<table id="table" class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Rank</th>
+      <th>Ranking Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in users %}
+      <tr>
+        <td class="text-center">{{ user.get_full_name }}</td>
+        <td class="text-center">{{ user.rank }}</td>
+        <td class="text-center">{{ user.total_score }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% block datatable_javascript %}
+  <script type="application/javascript">
+    $(function () {
+      let table = $("#table").DataTable({
+        pageLength: 100,
+        orderCellsTop: true,
+        colReorder: true,
+        order: [[ 2, "desc" ]]
+      });
+    });
+  </script>
+{% endblock %}

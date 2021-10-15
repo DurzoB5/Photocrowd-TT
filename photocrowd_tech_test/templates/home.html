@@ -1,0 +1,11 @@
+{% extends 'abstracts/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="row my-3">
+        <div class="col-sm-8 offset-2">
+            {% include 'partials/about_card.html' %}
+        </div>
+    </div>
+{% endblock %}

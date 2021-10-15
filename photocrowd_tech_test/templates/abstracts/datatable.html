@@ -1,0 +1,9 @@
+<table id="{{ table_id|default:'table' }}" data-ajax="{% if ajax_arg %}{% url ajax_url ajax_arg %}{% else %}{{ ajax_url }}{% endif %}" data-server-side="true" class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        {% block datatable_head_row %}{% endblock %}
+      </tr>
+    </thead>
+  </table>
+
+  {% block datatable_javascript %}{% endblock %}
