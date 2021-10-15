@@ -3,7 +3,7 @@ PhotoCrowd Tech Test
 
 PhotoCrowd tech test written by Tom Morledge
 
-Time spent on the project ~8 hours
+Time spent on the project ~9 hours
 
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
      :target: https://github.com/ambv/black
@@ -42,6 +42,22 @@ You can also access the data for the leaderboard through the REST API at "http:/
 
 I created a Dockerfile that will setup the project for you and import `scores.json`. There is also a docker compose file `local.yml`
 for running the system with a postgres database.
+
+
+Tech
+----
+
+I decided to use Django as a web server as I'm very familiar with it and becuase it is also part of PhotoCrowd's tech stack.
+
+I attempted to use django datatable packages for rendering the leaderboard table but due to the complexity of the data and the way
+it is produced I ended up having to run with something custom.
+
+I mostly followed my own style guide for the design of the of the django app and also made sure all code conforms to black, PEP8 and
+mypy.
+
+For the UI I used Django's builtin template rendering because I have a good understanding of it's workings and it very quick for
+prototyping.
+
 
 Future
 ------
